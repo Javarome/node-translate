@@ -1,15 +1,45 @@
 {
   "name": "node-translate",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "ngx-translate for Node",
+  "author": "Jérôme Beau",
+  "keywords": [
+    "node",
+    "i18n",
+    "translate",
+    "ngx-translate"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ngx-translate/core",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngx-translate/core.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ngx-translate/core/issues"
+  },
   "dependencies": {
     "rxjs": "^6.5.3"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.5",
+    "@types/mocha": "^5.2.7",
+    "@types/chai": "^4.2.3",
+    "@types/jasmine": "^3.4.0",
+    "chai": "^4.2.0",
+    "jasmine": "^3.5.0",
+    "mocha": "^6.2.0",
+    "sinon": "^7.5.0",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3",
+    "ts-node-dev": "^1.0.0-pre.43",
+    "semantic-release": "8.2.3"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   }
 }

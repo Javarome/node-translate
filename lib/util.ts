@@ -59,17 +59,17 @@ export function isObject(item: any): boolean {
 }
 
 export function mergeDeep(target: any, source: any): any {
-  let output = Object.assign({}, target);
+  let output = {...target};
   if (isObject(target) && isObject(source)) {
     Object.keys(source).forEach((key: any) => {
       if (isObject(source[key])) {
         if (!(key in target)) {
-          Object.assign(output, {[key]: source[key]});
+          output = {...{}, ...{[key]: source[key]}};
         } else {
           output[key] = mergeDeep(target[key], source[key]);
         }
       } else {
-        Object.assign(output, {[key]: source[key]});
+        output = {...{}, ...{[key]: source[key]}};
       }
     });
   }
