@@ -33,7 +33,7 @@
     "tslint": "^5.20.0",
     "typescript": "^3.6.3",
     "ts-node-dev": "^1.0.0-pre.43",
-    "semantic-release": "8.2.3"
+    "semantic-release": "17.2.3"
   },
   "engines": {
     "node": ">=10.0.0"
